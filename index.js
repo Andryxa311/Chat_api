@@ -35,7 +35,7 @@ bot.on('message', async message => {
     await bot.sendMessage(chatID,text);
     await bot.sendMessage(chatID,text);
     await bot.sendMessage(chatID,text);
-    await bot.sendMessage(chatID,text);
+    await bot.sendMessage(chatID,text); 
 
 });
 
