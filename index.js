@@ -34,7 +34,7 @@ bot.on('message', async message => {
     // let rezult = response.data.choices[0]['text'];
     await bot.sendMessage(chatID,text);
     
-    await bot.sendMessage(chatID,text);
+    await bot.sendMessage(chatID,text); 
 
 });
 
