@@ -17,22 +17,24 @@ bot.on('message', async message => {
   const chatID = message.chat.id;
   // console.log(text);
 
-    const response = await openai.createCompletion({
-      model: "text-davinci-003",
-      prompt: text,
-      // suffix: "1676385671",
-      // stop: ["You:"],  
-      temperature: 1,
-      top_p: 1.0,
-      max_tokens: 4048,
-      n: 1,
-      frequency_penalty: 0.0,
-      presence_penalty: 0.0,
-      // logit_bias: {"1676385842": -100},
-    });
+    // const response = await openai.createCompletion({
+    //   model: "text-davinci-003",
+    //   prompt: text,
+    //   // suffix: "1676385671",
+    //   // stop: ["You:"],  
+    //   temperature: 1,
+    //   top_p: 1.0,
+    //   max_tokens: 4048,
+    //   n: 1,
+    //   frequency_penalty: 0.0,
+    //   presence_penalty: 0.0,
+    //   // logit_bias: {"1676385842": -100},
+    // });
     // console.log(response.data);
-    let rezult = response.data.choices[0]['text'];
-    await bot.sendMessage(chatID,rezult);
+    // let rezult = response.data.choices[0]['text'];
+    await bot.sendMessage(chatID,text);
+    
+    await bot.sendMessage(chatID,text);
 
 });
 
