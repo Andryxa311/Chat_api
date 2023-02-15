@@ -5,18 +5,18 @@ const bot = new TelegramBot(token, { polling: true });
 // OpenAI
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
-    apiKey: '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' 
+    apiKey: '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' 
 });
 const openai = new OpenAIApi(configuration);
 
 
 
 
-bot.on('message', (message) => {
+bot.on('message', async message => {
   const text = message.text;
   const chatID = message.chat.id;
   // console.log(text);
-  (async () => {
+
     const response = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: text,
@@ -32,8 +32,8 @@ bot.on('message', (message) => {
     });
     console.log(response.data);
     let rezult = response.data.choices[0]['text'];
-    bot.sendMessage(chatID,rezult);
-  })();
+    await bot.sendMessage(chatID,rezult);
+
 });
 
 
