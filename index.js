@@ -30,7 +30,7 @@ bot.on('message', async message => {
       presence_penalty: 0.0,
       // logit_bias: {"1676385842": -100},
     });
-    console.log(response.data);
+    // console.log(response.data);
     let rezult = response.data.choices[0]['text'];
     await bot.sendMessage(chatID,rezult);
 
