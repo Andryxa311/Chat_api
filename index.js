@@ -21,7 +21,7 @@ bot.on('message', async message => {
       model: "text-davinci-003",
       prompt: text,
       // suffix: "1676385671",
-      // stop: ["You:"], 
+      // stop: ["You:"],  
       temperature: 1,
       top_p: 1.0,
       max_tokens: 4048,
